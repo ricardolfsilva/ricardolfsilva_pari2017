@@ -51,3 +51,23 @@ gboolean pari_UpdateImageAreas(gpointer data)
         return TRUE;
 }
 
+
+/*-------------------------------------------------------------------*/
+/**
+ * @brief  Breve descrição
+ * @param  Parametros
+ * @return Retorno da função
+ */
+ 
+gboolean on_drawingarea1_expose_event(GtkWidget * widget, GdkEvent * event, gpointer user_data)
+{
+        pari_PerformImageAcquisition(captureG);             //acquire new image
+        pari_ProcessUserOperations(src_imageG, dst_imageG); // Perform here the openCV transformations
+
+        //update the drawing area displays
+        pari_RefreshDrawingArea("drawingarea1", src_imageG);
+        pari_RefreshDrawingArea("drawingarea2", dst_imageG);
+        return TRUE;
+}
+
+

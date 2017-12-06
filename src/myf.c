@@ -207,3 +207,47 @@ void pari_RefreshDrawingArea( char * widgetName, IplImage *img)
         cairo_destroy(cr);
         g_object_unref(pix);  //free the pixbuf...
 }
+
+
+/*-------------------------------------------------------------------*/
+/**
+ * @brief  Breve descrição
+ * @param  Parametros
+ * @return Retorno da função
+ */
+ 
+void pari_ProcessUserOperations(IplImage *src, IplImage *dst)
+{
+        /*If nothing is to be done at least the dst is the same as src*/
+        cvCopy( src, dst, NULL);
+
+        //Now operate all functions accumulated (one after one)
+        /*pari_UserOperation1(dst, dst, builderG, (gpointer)"checkbutton1", ...);
+        pari_UserOperation2(dst, dst, builderG, (gpointer)"checkbutton2", ...);
+        pari_UserOperation3(dst, dst, builderG, (gpointer)"checkbutton3", ...);
+        pari_UserOperation4(dst, dst, builderG, (gpointer)"checkbutton4", ...);
+        pari_UserOperation5(dst, dst, builderG, (gpointer)"checkbutton5", ...);
+        pari_UserOperation6(dst, dst, builderG, (gpointer)"checkbutton6", ...);*/
+}
+
+
+/*-------------------------------------------------------------------*/
+/**
+ * @brief  Breve descrição
+ * @param  Parametros
+ * @return Retorno da função
+ */
+ 
+/*void pari_UserOperation1(IplImage *src, IplImage *dst, GtkBuilder *gb, gpointer udata1, gpointer udata2);
+{
+	IplImage *tmp_gray=cvCreateImage( cvSize(src->width,src->height), IPL_DEPTH_8U, 1);  //aux image
+      cvCvtColor(src, tmp_gray, CV_RGB2GRAY);
+      cvMerge(tmp_gray, tmp_gray, tmp_gray, NULL, dst); //thee equal channels
+      cvReleaseImage(&tmp_gray);   //free aux image
+}*/
+
+
+
+
+
+
