@@ -32,7 +32,7 @@ main (int argc, char *argv[])
 
         /* load the interface after a configuration file*/
         builderG = gtk_builder_new();	//builderG e carregamento da interface
-        gtk_builder_add_from_file(builderG, "myda.glade", NULL);
+        gtk_builder_add_from_file(builderG, "mydr2.glade", NULL);
 
         /* connect the signals in the interface */
         gtk_builder_connect_signals(builderG, NULL);	//adicionar os sinais, eventos do rato ou teclado
@@ -51,10 +51,15 @@ main (int argc, char *argv[])
 
 //////////até aqui!
 
-	p_InitTimer();
+	g_timeout_add(30, (GSourceFunc) pari_UpdateImageAreas, (gpointer) NULL);
+        captureG=pari_StartImageAcquisition();
 
         /* start the event loop */
         gtk_main();
+
+	cvReleaseCapture(&captureG);             //Release capture device.
+        cvReleaseImage(&dst_imageG);             //Release image (free pointer when no longer used)
+        cvReleaseImage(&src_imageG);             //Release image (free pointer when no longer used).
 
         return 0;
 #endif

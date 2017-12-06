@@ -1,0 +1,4 @@
+/home/ricardo/Dropbox/PARI/aula12/exgithub/ricardolfsilva_pari2017/build/CMakeFiles/edit_cache.dir
+/home/ricardo/Dropbox/PARI/aula12/exgithub/ricardolfsilva_pari2017/build/CMakeFiles/rebuild_cache.dir
+/home/ricardo/Dropbox/PARI/aula12/exgithub/ricardolfsilva_pari2017/build/CMakeFiles/cpfiles.dir
+/home/ricardo/Dropbox/PARI/aula12/exgithub/ricardolfsilva_pari2017/build/CMakeFiles/aula12.dir
